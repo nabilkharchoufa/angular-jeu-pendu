@@ -1,0 +1,32 @@
+<mat-card>
+  <div class="alert alert-{{success ? 'success' : 'danger'}}"
+  [ngClass]="{'alert-success': success, 'alert-danger': fail, 'alert-info': !success && !fail}"
+  >
+      {{message | translate}}
+  </div>
+  <mat-card-content>
+    <div style="height: auto;" class="content-center">
+      <div gdAreas.xs="header | leftside | content | rightside | footer" gdGap="1em" gdColumns.xs="none"
+        gdAreas.sm="header | leftside | content | rightside | footer"
+        gdAreas.gt-sm="header header header | leftside content rightside| footer footer footer"
+        gdColumns.gt-sm="200px auto 200px" gdGap.gt-sm="20px" [ngStyle]="{'max-width': '800px'}">
+        <div class="content-center" gdArea="header" *ngIf="lettersOfWordToDisplay">
+          <button mat-stroked-button color="primary" *ngFor="let letter of lettersOfWordToDisplay"
+            class="btn-letter">{{letter}}</button>
+        </div>
+        <div gdArea="leftside"><h4 class="content-center">{{remainingNumberOfTries}}/10 {{'game.remaining-number-of-tries' | translate}}</h4></div>
+        <div gdArea="rightside" class="content-center">
+            <div [ngClass]="{'gif-success': success, 'gif-fail': fail, 'gif-init': !success && !fail}" class="class-gif">
+        </div>
+        </div>
+        <div gdArea="content" class="content-center">
+          <app-keyboard (letterClicked)='onLetterHasBenClicked($event)' [disableAllLetters]="fail || success"></app-keyboard>
+        </div>
+        <div gdArea="footer" class="content-center">
+          <button mat-stroked-button color="basic"
+            class="btn-letter" (click)="replay()"><i class="fas fa-sync-alt"></i></button>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

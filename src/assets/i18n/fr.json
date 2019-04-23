@@ -1,0 +1,21 @@
+{
+    "game": {
+        "name-of-game": "JEU-DU-PENDU",
+        "start-game": "Jouer",
+        "message-info": "Indice : vous cherchez un nom d'animal en anglais",
+        "message-succes": "Félicitations : vous l'avez trouvée!",
+        "message-fail": "Désolé : vous avez épuisé les 10 essais possible",
+        "remaining-number-of-tries": "essais restants",
+        "replay": "Rejouer",
+        "welcome": "Bienvenue",
+        "logout": "Se déconnecter",
+        "login": "Se connecter"
+    },
+    "login": {
+        "login": "Login",
+        "placeholder-pseudo": "Entrez vontre pseudo",
+        "login-required": "Le pseudo est obligatoire",
+        "login-minlength": "Le pseudo doit être supérrieur à 3 caractères",
+        "save": "Enregistrer"
+    }
+}

@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-title color="primary">{{'login.login' | translate}}</mat-card-title>
+  <mat-card-content>
+    <form novalidate (ngSubmit)="save()" [formGroup]="userForm">
+        <mat-form-field>
+          <input matInput type="text" placeholder="{{'login.placeholder-pseudo' | translate}}" formControlName="login" />
+          <mat-error *ngIf="userForm?.get('login').invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      <div class="button" matTooltip="Renseigner un pseudo valide pour pouvoir enregistrer"
+      [matTooltipDisabled]="userForm.valid">
+        <button type="submit" mat-stroked-button color="primary" [disabled]="userForm.invalid">
+          {{'login.save' | translate}}
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

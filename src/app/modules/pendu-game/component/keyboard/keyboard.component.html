@@ -1,0 +1,6 @@
+<div class="card-letter">
+  <button mat-mini-fab color="primary" *ngFor="let letter of letters" class="btn-letter"
+    [disabled]="letter.disable || disableAllLetters" (click)="choiceLetter(letter)">
+    {{letter.value}}
+  </button>
+</div>

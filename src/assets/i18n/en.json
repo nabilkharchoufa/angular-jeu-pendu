@@ -1,0 +1,21 @@
+{
+    "game": {
+        "name-of-game": "Hangman",
+        "start-game": "Play",
+        "message-info": "A clue : looking for an animal name in english",
+        "message-succes": "Congratulations : you found it",
+        "message-fail": "Sorry : you have exhausted the 10 possible tries",
+        "remaining-number-of-tries": "remaining tries",
+        "replay": "Replay",
+        "welcome": "Welcome",
+        "logout": "Disconnect",
+        "login": "Log in"
+    },
+    "login": {
+        "login": "Login",
+        "placeholder-pseudo": "please enter your nickname",
+        "login-required": "The username is required",
+        "login-minlength": "The nickname must be greater than 3 characters",
+        "save": "Save"
+    }
+}

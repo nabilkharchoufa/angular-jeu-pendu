@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="navbar">
+  <span class="title">{{'game.name-of-game' | translate}}</span>
+  <button mat-button [routerLink]="['/game']">{{'game.start-game' | translate}}</button>
+  <span class="split-spacer"></span>
+  <button mat-button *ngIf="isLoggedIn">{{'game.welcome' | translate}} {{ userName }}</button>
+  <mat-form-field class="select-language">
+      <mat-select ([ngModel])="selectLanguage" [(value)]="selectLanguage" (valueChange)="changeLanguage($event)" name="selectLanguage">
+        <mat-option *ngFor="let lang of languages" [value]="lang">{{lang | uppercase}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  <button mat-button (click)="logOut()" *ngIf="isLoggedIn">{{'game.logout' | translate}}</button>
+  <button mat-button [routerLink]="['/login']" *ngIf="!isLoggedIn">{{'game.login' | translate}}</button>
+</mat-toolbar>

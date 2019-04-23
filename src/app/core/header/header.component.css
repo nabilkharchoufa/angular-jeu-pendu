@@ -1,0 +1,12 @@
+.split-spacer {
+    flex: 1 1 auto;
+  }
+
+.navbar button {
+  font-size: 15px !important;
+}
+
+.select-language{
+  max-width: 60px;
+  font-size: 15px;
+}
